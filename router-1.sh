@@ -16,4 +16,16 @@ ip link set dev eth1.20 up
 ip addr add 192.168.1.254/24 dev eth1.10
 ip addr add 192.168.2.126/27 dev eth1.20
 
+ip link set dev eth2 up
+
+ip addr add 10.1.1.1/30 dev eth2
+
+sed -i 's/zebra=no/zebra=yes/g' /etc/frr/daemons
+sed -i 's/ospfd=no/ospfd=yes/g' /etc/frr/daemons
+
 sysctl net.ipv4.ip_forward=1
+
+service frr restart
+
+vtysh -c 'configure terminal' -c 'interface eth2' -c 'ip ospf area 0.0.0.0'
+vtysh -c 'configure terminal' -c 'router ospf' -c 'redistribute connected'
