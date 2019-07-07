@@ -1,8 +1,9 @@
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y tcpdump --assume-yes
+apt-get install -y curl
 
-ip link set eth1 up
+ip link set dev eth1 up
 
 ip addr add 192.168.1.1/24 dev eth1
 
