@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
     hostb.vm.provision "shell", path: "host-1-b.sh"
   end
   config.vm.define "host-2-c" do |hostc|
-    hostc.vm.box = "minimal/trusty64"
+    hostc.vm.box = "minimal/xenial64"
     hostc.vm.hostname = "host-2-c"
     hostc.vm.network "private_network", virtualbox__intnet: "broadcast_router-south-2", auto_config: false
     hostc.vm.provision "shell", path: "host-2-c.sh"
