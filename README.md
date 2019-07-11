@@ -109,7 +109,7 @@ To reach the assignment request, the network topology is composed by 4 different
 
 
 * Subnet **A** includes *host-1-a* and *router-1*. It has a */24* subnet mask to allow up to 2<sup>32-24</sup>-2= 254 hosts (assignment request was 130 hosts)
-* Subnet **B** *192.168.2.96/27* which includes *host-1-b* and *router-1*. It has a */27* subnet mask to allow up to 2<sup>32-27</sup>-2= 30 hosts (assignment request was 25 hosts)
+* Subnet **B** includes *host-1-b* and *router-1*. It has a */27* subnet mask to allow up to 2<sup>32-27</sup>-2= 30 hosts (assignment request was 25 hosts)
 * Subnet **C** includes *router-1* and *router-2*. It has a */30* subnet mask to allow up to 2<sup>32-30</sup>-2= 2 hosts (subnet used completely)
 * Subnet **D** includes *router-2* and *host-2-c*. It has a */30* subnet mask to allow up to 2<sup>32-30</sup>-2= 2 hosts (subnet used completely)
 
