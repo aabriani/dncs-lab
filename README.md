@@ -234,7 +234,7 @@ First, install FRRouting to provide dynamic routing as requested:
 apt-get install -y frr --assume-yes --force-yes
 ```
 
-Then assign desired IP addresses to *eth1.10*, *eth1.20*, *eth2*:
+Then assign desired IP addresses to *eth1*, *eth2*:
 ```ruby
 ip addr add 10.1.1.2/30 dev eth2
 ip addr add 172.16.1.2/30 dev eth1
